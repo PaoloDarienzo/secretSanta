@@ -25,7 +25,6 @@ public class Main {
 		assignCouples();
 		
 		System.out.println("Done");
-		System.out.println(couples.toString());
 		
 		for(Entry<String, String> entry : couples.entrySet()) {
         	System.out.println(entry.getKey() + " ---> \t\t" + entry.getValue());
