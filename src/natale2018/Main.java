@@ -10,6 +10,8 @@ import java.util.Random;
 
 public class Main {
 	
+	private static boolean doItAgain;
+	
 	private static List<String> participants = new ArrayList<String>();
 	private static Set<String> picked = new HashSet<String>();
 	
@@ -21,15 +23,18 @@ public class Main {
 		
 		System.out.println("Number participants: " + participants.size());	
 		System.out.println(participants.toString());
-		
-		assignCouples();
-		
-		System.out.println("Done");
+				
+		do {
+			assignCouples();
+		}
+		while(doItAgain);
+
+		System.out.println("Done!");
 		
 		for(Entry<String, String> entry : couples.entrySet()) {
         	System.out.println(entry.getKey() + " ---> \t\t" + entry.getValue());
         }
-		
+
 	}
 	
 	private static void assignCouples(){
@@ -102,6 +107,8 @@ public class Main {
 				//non ci sono soluzioni, e' tutto da rifare
 				couples.clear();
 				picked.clear();
+				doItAgain = true;
+				return;
 			}
 			
 		}
@@ -113,9 +120,9 @@ public class Main {
 		participants.add("Paolo");
 		participants.add("Elena");
 		participants.add("Teo");
-		participants.add("Herry");
-		participants.add("Lucia");
-		participants.add("Flo");
+		participants.add("Herry");/*
+		participants.add("Lucia");/*
+		participants.add("Flo");/*
 		participants.add("Riccio");
 		participants.add("Gaia");
 		participants.add("Denis");
@@ -134,7 +141,7 @@ public class Main {
 		participants.add("Mirko");
 		participants.add("Olly");
 		participants.add("Ferra");
-		participants.add("Stecca");
+		participants.add("Stecca");*/
 		
 	}
 
