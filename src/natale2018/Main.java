@@ -1,4 +1,7 @@
 package natale2018;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,7 +20,7 @@ public class Main {
 	
 	private static Map<String, String> couples = new HashMap<String, String>();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
 		
 		fillListParticipants();
 		
@@ -35,8 +38,15 @@ public class Main {
 			return;
 		}
 		for(Entry<String, String> entry : couples.entrySet()) {
-        	System.out.println(entry.getKey() + " ---> \t\t" + entry.getValue());
+        	//System.out.println(entry.getKey() + " ---> \t\t" + entry.getValue());
+			PrintWriter writer = new PrintWriter(entry.getKey(), "UTF-8");
+			writer.println("Gentile " + entry.getKey() + ", Buon Natale!");
+			writer.println("La sua persona Ã¨ stata designata Babbo Natale segreto di " + entry.getValue()
+			+ "!");
+			writer.println("Buon divertimento!");
+			writer.close();
         }
+		
 
 	}
 	
@@ -48,7 +58,7 @@ public class Main {
 			
 			compatibili.addAll(participants);
 			compatibili.remove(partecipante); //rimuovo me
-			compatibili.removeAll(picked); //rimuovo quelli già pescati
+			compatibili.removeAll(picked); //rimuovo quelli gia' pescati
 			
 			//casi speciali
 			if(partecipante.equals("Paolo")) {
@@ -106,7 +116,7 @@ public class Main {
 
 			}
 			else {
-				//la lista di compatibilità è vuota
+				//la lista di compatibilita'e' vuota
 				//non ci sono soluzioni, e' tutto da rifare
 				couples.clear();
 				picked.clear();
