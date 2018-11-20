@@ -63,43 +63,37 @@ public class Main {
 			//casi speciali
 			if(partecipante.equals("Paolo")) {
 				compatibili.remove("Lucia");
-				compatibili.remove("Herry");
 			}
 			else if(partecipante.equals("Lucia")) {
 				compatibili.remove("Paolo");
-				compatibili.remove("Teo");
+				compatibili.remove("Matteo");
 			}
 			else if(partecipante.equals("Denis")) {
 				compatibili.remove("Martina");
+				compatibili.remove("Emil");
 			}
 			else if(partecipante.equals("Martina")) {
 				compatibili.remove("Denis");
 			}
-			else if(partecipante.equals("Herry")) {
-				compatibili.remove("Flo");
-			}
 			else if(partecipante.equals("Flo")) {
-				compatibili.remove("Herry");
+				compatibili.remove("Elena");
 			}
-			else if(partecipante.equals("Teo")) {
+			else if(partecipante.equals("Matteo")) {
 				compatibili.remove("Elena");
 			}
 			else if(partecipante.equals("Elena")) {
-				compatibili.remove("Teo");
+				compatibili.remove("Matteo");
 			}
-			else if(partecipante.equals("Riccio")) {
+			else if(partecipante.equals("Lorenzo")) {
 				compatibili.remove("Gaia");
+				compatibili.remove("Lucia");
 			}
 			else if(partecipante.equals("Gaia")) {
-				compatibili.remove("Riccio");
+				compatibili.remove("Lorenzo");
 			}
-			else if(partecipante.equals("Federico Grigolini")) {
-				compatibili.remove("Chiara");
+			else if(partecipante.equals("Alberto")) {
+				compatibili.remove("Leonardo");
 			}
-			else if(partecipante.equals("Chiara")) {
-				compatibili.remove("Federico Grigolini");
-			}
-			
 			
 			if(!compatibili.isEmpty()) {
 				//Genero un random
@@ -131,30 +125,26 @@ public class Main {
 	private static void fillListParticipants() {
 		
 		participants.add("Paolo");
-		participants.add("Elena");
-		participants.add("Teo");
-		participants.add("Herry");
-		participants.add("Lucia");
-		participants.add("Flo");
-		participants.add("Riccio");
-		participants.add("Gaia");
-		participants.add("Denis");
-		participants.add("Martina");
 		participants.add("Alberto");
-		participants.add("Giuliez");
+		participants.add("Denis");
+		participants.add("Elena");
+		participants.add("Lorenzo");
+		participants.add("Matteo");
 		participants.add("Andrea");
-		participants.add("Chiara");
 		participants.add("Ciompi");
 		participants.add("Emil");
 		participants.add("Federica");
 		participants.add("Federico Bianchi");
-		participants.add("Federico Grigolini");
 		participants.add("Federico Marchi");
+		participants.add("Flora");
+		participants.add("Gaia");
 		participants.add("Leonardo");
+		participants.add("Lucia");
 		participants.add("Mirko");
-		participants.add("Olly");
 		participants.add("Ferra");
 		participants.add("Stecca");
+		participants.add("Martina");
+		participants.add("Giuliez");
 		
 	}
 
