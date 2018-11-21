@@ -11,7 +11,7 @@ import java.util.Set;
 import java.util.Map.Entry;
 import java.util.Random;
 
-public class Main {
+public class Estraction {
 	
 	private static boolean doItAgain = false;
 	
@@ -39,10 +39,11 @@ public class Main {
 		}
 		for(Entry<String, String> entry : couples.entrySet()) {
         	//System.out.println(entry.getKey() + " ---> \t\t" + entry.getValue());
-			PrintWriter writer = new PrintWriter(entry.getKey(), "UTF-8");
+			PrintWriter writer = new PrintWriter(entry.getKey() + ".txt", "UTF-8");
 			writer.println("Gentile " + entry.getKey() + ", Buon Natale!");
 			writer.println("La sua persona è stata designata Babbo Natale segreto di " + entry.getValue()
 			+ "!");
+			writer.println("Ci vediamo il 22 dicembre nella taverna di Leonardo.");
 			writer.println("Buon divertimento!");
 			writer.close();
         }
@@ -75,14 +76,13 @@ public class Main {
 			else if(partecipante.equals("Martina")) {
 				compatibili.remove("Denis");
 			}
-			else if(partecipante.equals("Flo")) {
-				compatibili.remove("Elena");
-			}
 			else if(partecipante.equals("Matteo")) {
 				compatibili.remove("Elena");
+				compatibili.remove("Paolo");
 			}
 			else if(partecipante.equals("Elena")) {
 				compatibili.remove("Matteo");
+				compatibili.remove("Olly");
 			}
 			else if(partecipante.equals("Lorenzo")) {
 				compatibili.remove("Gaia");
@@ -93,6 +93,18 @@ public class Main {
 			}
 			else if(partecipante.equals("Alberto")) {
 				compatibili.remove("Leonardo");
+			}
+			else if(partecipante.equals("Flora")) {
+				compatibili.remove("Elena");
+			}
+			else if(partecipante.equals("Emil")) {
+				compatibili.remove("Federica");
+			}
+			else if(partecipante.equals("Giuliez")) {
+				compatibili.remove("Andrea");
+			}
+			else if(partecipante.equals("Federica")) {
+				compatibili.remove("Giuliez");
 			}
 			
 			if(!compatibili.isEmpty()) {
@@ -124,6 +136,7 @@ public class Main {
 
 	private static void fillListParticipants() {
 		
+		//participants.add("Ciompi");
 		participants.add("Paolo");
 		participants.add("Alberto");
 		participants.add("Denis");
@@ -131,7 +144,6 @@ public class Main {
 		participants.add("Lorenzo");
 		participants.add("Matteo");
 		participants.add("Andrea");
-		participants.add("Ciompi");
 		participants.add("Emil");
 		participants.add("Federica");
 		participants.add("Federico Bianchi");
@@ -141,6 +153,7 @@ public class Main {
 		participants.add("Leonardo");
 		participants.add("Lucia");
 		participants.add("Mirko");
+		participants.add("Olly");
 		participants.add("Ferra");
 		participants.add("Stecca");
 		participants.add("Martina");
