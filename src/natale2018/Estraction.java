@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -133,7 +134,7 @@ public class Estraction {
 		}
 
 	}
-
+	
 	private static void fillListParticipants() {
 		
 		//participants.add("Ciompi");
@@ -158,6 +159,8 @@ public class Estraction {
 		participants.add("Stecca");
 		participants.add("Martina");
 		participants.add("Giuliez");
+		
+		Collections.shuffle(participants);
 		
 	}
 
