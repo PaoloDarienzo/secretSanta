@@ -19,13 +19,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		int counter = 0;
+		
 		fillListParticipants();
 		
 		System.out.println("Number participants: " + participants.size());	
 		System.out.println(participants.toString());
 		
 		do {
+			counter++;
 			assignCouples();
+			if(counter>100) {
+				System.out.println("ERROR");
+				break;
+			}
 		}
 		while(doItAgain);
 
